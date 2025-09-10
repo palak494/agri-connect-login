@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Smartphone, Lock, Leaf, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FormField } from "@/components/ui/form-field";
@@ -6,6 +7,7 @@ import { RoleSelect } from "@/components/ui/role-select";
 import heroBackground from "@/assets/farm-landscape-bg.jpg";
 
 export default function AgriLoginPage() {
+  const navigate = useNavigate();
   const [role, setRole] = useState("farmer");
   const [mobileNumber, setMobileNumber] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +15,26 @@ export default function AgriLoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Login attempt:", { mobileNumber, password, role });
-    // Handle login logic here
+    
+    // Navigate to appropriate dashboard based on role
+    if (mobileNumber && password) {
+      switch (role) {
+        case "farmer":
+          navigate("/farmer");
+          break;
+        case "distributor":
+          navigate("/distributor");
+          break;
+        case "retailer":
+          navigate("/retailer");
+          break;
+        case "consumer":
+          navigate("/consumer");
+          break;
+        default:
+          navigate("/farmer");
+      }
+    }
   };
 
   const handleRegister = () => {
