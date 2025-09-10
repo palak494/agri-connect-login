@@ -122,14 +122,14 @@ export default function AgriLoginPage() {
         </div>
 
         {/* Additional Info Cards */}
-        <div className="flex justify-center gap-4 mt-6">
-          <div className="glass-effect rounded-lg px-4 py-2 border border-primary/20">
+        <div className="grid grid-cols-3 gap-3 mt-6 max-w-sm mx-auto">
+          <div className="glass-effect rounded-lg px-3 py-2 border border-primary/20 text-center">
             <p className="text-xs text-muted-foreground">🔒 Secure Login</p>
           </div>
-          <div className="glass-effect rounded-lg px-4 py-2 border border-primary/20">
+          <div className="glass-effect rounded-lg px-3 py-2 border border-primary/20 text-center">
             <p className="text-xs text-muted-foreground">🌱 Sustainable Future</p>
           </div>
-          <div className="glass-effect rounded-lg px-4 py-2 border border-primary/20">
+          <div className="glass-effect rounded-lg px-3 py-2 border border-primary/20 text-center">
             <p className="text-xs text-muted-foreground">📱 Mobile First</p>
           </div>
         </div>
