@@ -3,7 +3,7 @@ import { Smartphone, Lock, Leaf, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FormField } from "@/components/ui/form-field";
 import { RoleSelect } from "@/components/ui/role-select";
-import heroBackground from "@/assets/agri-hero-bg.jpg";
+import heroBackground from "@/assets/farm-landscape-bg.jpg";
 
 export default function AgriLoginPage() {
   const [role, setRole] = useState("farmer");
